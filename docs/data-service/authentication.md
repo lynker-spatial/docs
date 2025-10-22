@@ -1,15 +1,21 @@
-# Lynker Spatial Authentication
+# Authentication <Badge type="warning" text="beta" />
 
 ## Bearer Token
 
-Outside of `hfutils`, unless you perform the OAuth2 authorization code grant flow,
-you will require setting a Bearer token on HTTP requests to the Lynker Spatial service proxy.
+Unless you are able to perform the OAuth2 authorization code flow directly, accessing
+the Lynker Spatial data service will require setting a Bearer token on all HTTP requests.
 
-To get your bearer token, you can retrieve the token from https://proxy.lynker-spatial.com/token.
+Your bearer token is retrievable from: https://proxy.lynker-spatial.com/token.
 
-This will return a (*long*) bearer token, its expiration time, and your account email in JSON.
+::: info
+In this case, the bearer token is an OAuth2 ID token, not an access token.
+:::
 
-## R: hfutils
+This will return a bearer token, its expiration time, and your account email in JSON.
+
+## R
+
+### hfutils
 
 hfutils does **not** require retrieving the bearer token yourself. It provides a dedicated
 OAuth2 client that performs the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) within an R session. Therefore,
@@ -33,29 +39,13 @@ tend to use different HTTP clients.
 For example, `libs = "gdal"` will apply
 the OAuth2 ID Token as the bearer for any GDAL requests when GDAL >= 3.9.
 
-## CLI: curl
+## Python
 
-```sh
-export LYNKER_SPATIAL_TOKEN="<'bearer' from https://proxy.lynker-spatial.com/token>"
-
-curl -H "Authorization: Bearer ${LYNKER_SPATIAL_TOKEN}" \
-    "https://proxy.lynker-spatial.com/oauth2/userinfo"
-```
-
-## CLI: GDAL
-
-> Note: this requires GDAL >= 3.9.
-
-```sh
-export GDAL_HTTP_AUTH=BEARER
-export GDAL_HTTP_BEARER="<'bearer' from https://proxy.lynker-spatial.com/token>"
-
-gdalinfo -ro -so "https://proxy.lynker-spatial.com/.../data.zarr"
-```
-
-## Python: fsspec/xarray
-
-> Note: for `rioxarray`, use GDAL bearer token authentication.
+### fsspec/xarray
+::: tip
+For [rioxarray](https://github.com/corteva/rioxarray), use [GDAL bearer token authentication](#GDAL)
+by setting the environment variables in your Python session.
+:::
 
 ```python
 import xarray as xr
@@ -66,4 +56,28 @@ fs      = fsspec.filesystem("https", client_kwargs={ "headers": headers })
 store   = fs.open("https://proxy.lynker-spatial.com/.../data.zarr")
 
 xr.open_dataset(store)
+```
+
+## CLI
+
+### curl
+
+```sh
+export LYNKER_SPATIAL_TOKEN="<'bearer' from https://proxy.lynker-spatial.com/token>"
+
+curl -H "Authorization: Bearer ${LYNKER_SPATIAL_TOKEN}" \
+    "https://proxy.lynker-spatial.com/oauth2/userinfo"
+```
+
+### GDAL
+
+::: warning
+This requires GDAL >= 3.9.
+:::
+
+```sh
+export GDAL_HTTP_AUTH=BEARER
+export GDAL_HTTP_BEARER="<'bearer' from https://proxy.lynker-spatial.com/token>"
+
+gdalinfo -ro -so "https://proxy.lynker-spatial.com/.../data.zarr"
 ```
