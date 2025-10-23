@@ -19,7 +19,7 @@ import Card from "@/components/Card.vue";
 </script>
 
 <Home>
-  <Card title="Quickstart" href="/introduction">
+  <Card title="Quickstart" href="/quickstart">
     Jump into the capabilities offered within the Lynker Spatial platform.
   </Card>
   <Card title="Authentication" href="/data-service/authentication">
@@ -28,7 +28,7 @@ import Card from "@/components/Card.vue";
   <Card title="Hydroforecasts" href="/data-service/accessing-data">
     Explore the forecast data available in our data services.
   </Card>
-  <Card title="Gridded" href="/data-service/gridded">
+  <Card title="Gridded Data" href="/data-service/gridded">
     Explore the gridded data available in our data services.
   </Card>
   <Card title="Hydrofabric" href="/data-service/hydrofabric">

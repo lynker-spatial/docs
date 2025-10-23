@@ -29,12 +29,16 @@ export default defineConfig({
     ],
 
     sidebar: [
-      { text: "Introduction", link: "/introduction" },
+      { text: "Quickstart", link: "/quickstart" },
       {
         text: "Data Service",
         items: [
           { text: "Authentication", link: "/data-service/authentication" },
-          { text: "Accessing Data", link: "/data-service/accessing-data" },
+          { text: "Hydro Forecasts", link: "/data-service/accessing-data" },
+          { text: "Gridded Data", link: "/data-service/gridded" },
+          { text: "Hydrofabric", link: "/data-service/hydrofabric" },
+          { text: "FIM", link: "/data-service/fim" },
+          { text: "Map Tiles", link: "/data-service/tiles" },
         ]
       }
     ],
