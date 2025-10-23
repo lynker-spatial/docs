@@ -1,6 +1,7 @@
 # Accessing Hydro Forecast Data
 
-**One Hour Short Range (All)**
+## Short Range (All)
+
 ```python
 import time
 import xarray as xr
@@ -31,6 +32,7 @@ ds_mem
 #>     streamflow     (init_time, forecast_time, feature_id) float64 400MB 0.17 ...
 ```
 
+## Short Range (Subset)
 ```python
 import time
 import xarray as xr
@@ -49,7 +51,6 @@ reaches = [
     24423427
 ]
 
-# --- Short Range ---
 uri = "https://data.lynker-spatial.com/nwm/short_range/2025090214.zarr"
 start = time.time()
 ds = xr.open_dataset(uri, engine="zarr", chunks="auto")
@@ -75,8 +76,30 @@ ds = ds.where(ds.feature_id.isin(reaches), drop=True)
 ds = ds.load()
 end = time.time()
 #> 0.793 seconds
+```
 
-# --- Analysis and Assimilation ---
+## Short Range (Query)
+```python
+import xarray as xr
+import dask
+
+uri = "https://data.lynker-spatial.com/nwm/short_range/2025090214.zarr"
+
+# Read Zarr metadata
+ds = xr.open_dataset(uri, engine="zarr", chunks="auto")
+
+# Find 9 reaches where the streamflow exceeded 10 at least once
+cond = (ds.streamflow > 10).compute()
+reaches = ds.where(cond, drop=True).feature_id[:9]
+ds = ds.sel(feature_id=reaches, drop=True)
+ds_mem = ds.load()
+```
+
+![](/img/short-range-query.png)
+
+## Analysis and Assimilation
+
+```python
 uri = "https://data.lynker-spatial.com/nwm/analysis/2025090214.zarr"
 start = time.time()
 ds = xr.open_dataset(uri, engine="zarr", chunks="auto")
@@ -102,8 +125,10 @@ ds = ds.where(ds.feature_id.isin(reaches), drop=True)
 ds = ds.load()
 end = time.time()
 #> 3.0864 seconds
+```
 
-# --- NWIS ---
+## NWIS Observations
+```python
 uri = "https://data.lynker-spatial.com/nwis/2025090214_discharge.zarr"
 start = time.time()
 ds = xr.open_dataset(uri, engine="zarr")
