@@ -33,7 +33,8 @@ export default defineConfig({
       {
         text: "Data Service",
         items: [
-          { text: "Authentication", link: "/data-service/authentication" }
+          { text: "Authentication", link: "/data-service/authentication" },
+          { text: "Accessing Data", link: "/data-service/accessing-data" },
         ]
       }
     ],
