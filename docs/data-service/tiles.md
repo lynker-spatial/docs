@@ -2,7 +2,7 @@
 
 [![](/img/tiles_hero.png)](https://tiles.lynker-spatial.com/)
 
-The [Lynker Spatial Tile marketplace](https://tiles.lynker-spatial.com/) provides cloud-hosted vector and raster tile datasets (such as the Modeling Hydrofabric, Continental Rivers, and National Wetlands]) optimized for web and desktop applications. All data is served in Protocol Buffer (PBF) format and requires JWT Bearer token authentication.  This guide will help you quickly set up your account, authenticate, and pull your first tile from the Lynker Spatial Tile Service!  For more details see the [more extensive tiles documentation](https://tiles.lynker-spatial.com/docs/index.html#signup).
+The [Lynker Spatial Tile marketplace](https://tiles.lynker-spatial.com/) provides cloud-hosted vector and raster tile datasets (such as the Modeling Hydrofabric, Continental Rivers, and National Wetlands]) optimized for web and desktop applications. All data is served in Protocol Buffer (PBF) format and requires JWT Bearer token authentication.  This guide will help you quickly set up your account, authenticate, and pull your first tile from the Lynker Spatial Tile Service!  For more details see the [more extensive tiles documentation](index.html).
 
 ### Step 1: Log into your Lynker Spatial data proxy Account
 1. Visit the [Lynker Spatial Authentication Portal](https://proxy.lynker-spatial.com/) (see the [Authentication quickstart](https://docs.lynker-spatial.com/data-service/authentication) for more details) to sign in.
@@ -61,7 +61,7 @@ curl -H "Authorization: Bearer %LYNKER_TOKEN%" https://tiles.lynker-spatial.com/
 
 If you've done this correctly it should print out a list of the avalible tiles like so:
 
-![](/img/windows_sucess_auth.png)
+![](/img/windows_success_auth.png)
 
 == Bash
 
@@ -93,7 +93,7 @@ URL: https://tiles.lynker-spatial.com/api/tiles/lynker-spatial-modeling-fabric/{
 
 4) Go to the HTTP Headers tab and add custom header:
 Header Name: Authorization
-Header Value: Bearer YOUR_ACCESS_TOKEN
+Header Value: Bearer <your_token_here>
 
 5) Click OK and save the connection
 6) Select the connection from the list and add the layer
@@ -126,4 +126,4 @@ map.addLayer({
 
 :::::
 
-Find more information on how to use the Lynker Spatial gridded data packages at it's [quickstart here](/data-service/gridded.md), or see how you can apply the [flowfabric-api](https://flowfabric-api.lynker-spatial.com/) to gain [Hydro-intellegence](/docs/data-service/accessing-data.md) on their assoisated quickstarts.
+Find more information on how to use the Lynker Spatial gridded data packages at it's [quickstart here](/data-service/gridded.md), or see how you can apply the [flowfabric-api](https://flowfabric-api.lynker-spatial.com/) to gain [Hydro-intellegence](/data-service/accessing-data.md) on their assoisated quickstarts.
