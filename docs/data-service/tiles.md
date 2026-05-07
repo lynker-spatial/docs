@@ -2,12 +2,13 @@
 
 [![](/img/tiles_hero.png)](https://tiles.lynker-spatial.com/)
 
-The [Lynker Spatial Tile marketplace](https://tiles.lynker-spatial.com/) provides cloud-hosted vector and raster tile datasets (such as the Modeling Hydrofabric, Continental Rivers, and National Wetlands]) optimized for web and desktop applications. All data is served in Protocol Buffer (PBF) format and requires JWT Bearer token authentication.  This guide will help you quickly set up your account, authenticate, and pull your first tile from the Lynker Spatial Tile Service!  For more details see the [more extensive tiles documentation](https://tiles.lynker-spatial.com/docs/index.html#getting-started).
+The [Lynker Spatial Tile marketplace](https://tiles.lynker-spatial.com/) provides cloud-hosted vector and raster tile datasets (such as the Modeling Hydrofabric, Continental Rivers, and National Wetlands) optimized for web and desktop applications. All data is served in Protocol Buffer (PBF) format and requires JWT Bearer token authentication.  This quickstart guide will help you quickly set up your account, authenticate, and pull your first tile from the Lynker Spatial Tile Service!  For more details see the [more extensive tiles documentation](https://tiles.lynker-spatial.com/docs/index.html#getting-started).
 
 ### Step 1: Log into your Lynker Spatial data proxy Account
 1. Visit the [Lynker Spatial Authentication Portal](https://proxy.lynker-spatial.com/) (see the [Authentication quickstart](https://docs.lynker-spatial.com/data-service/authentication) for more details) to sign in.
 
 ### Step 2: Get Your Access Token
+
 Access to the Map Tiles requires a JWT Bearer token. Tokens are user-specific and expire after 1 day (Refresh tokens last 30 days). 
 
 You can retrieve your token programmatically using Python (`boto3`), or you can copy it directly from your active session in the authentication portal.
@@ -15,7 +16,7 @@ You can retrieve your token programmatically using Python (`boto3`), or you can 
 :::::tabs
 == GUI session
 
-Navigate to: https://proxy.lynker-spatial.com/token to find the relevent token you'll need.
+Navigate to: https://proxy.lynker-spatial.com/token to find the relevant token you'll need.
 
 [![](/img/gui_token.png)](https://proxy.lynker-spatial.com/token)
 
@@ -48,7 +49,8 @@ print(TOKEN)
 
 
 ### Step 3: Verify Service Access
-Once you have your token, export it to your environment and verify the connection by calling the catalog endpoint.  An easy way to test this is in the command line:
+
+Once you have your token, export it to your environment and verify the connection by calling the catalog endpoint.  An easy way to test this is in the command-line:
 
 :::::tabs
 == Windows cmd
@@ -59,7 +61,7 @@ set "LYNKER_TOKEN=<your_token_here>"
 curl -H "Authorization: Bearer %LYNKER_TOKEN%" https://tiles.lynker-spatial.com/catalog
 ```
 
-If you've done this correctly it should print out a list of the avalible tiles like so:
+If you've done this correctly it should print out a list of the available tiles like so:
 
 ![](/img/windows_success_auth.png)
 
@@ -88,16 +90,21 @@ To use the tiles within a QGIS session:
 2) Click the New button to create a new connection
 3) Enter connection details:
 
+```md
 Name: Lynker Hydrofabric
-URL: https://tiles.lynker-spatial.com/api/tiles/lynker-spatial-modeling-fabric/{z}/{x}/{y}  (omit .pbf extension)
+URL: https://tiles.lynker-spatial.com/api/tiles/lynker-spatial-modeling-fabric/{z}/{x}/{y}
+```
 
 4) Go to the HTTP Headers tab and add custom header:
+
+```md
 Header Name: Authorization
 Header Value: Bearer <your_token_here>
+```
 
 5) Click OK and save the connection
 6) Select the connection from the list and add the layer
-7) gure symbology by right-clicking the layer → Properties → Symbology
+7) Configure symbology by right-clicking the layer → Properties → Symbology
 
 
 == MapLibre GL JS
@@ -126,4 +133,4 @@ map.addLayer({
 
 :::::
 
-Find more information on how to use the Lynker Spatial gridded data packages at it's [quickstart here](/data-service/gridded.md), or see how you can apply the [flowfabric-api](https://flowfabric-api.lynker-spatial.com/) to gain [Hydro-intellegence](/data-service/accessing-data.md) on their assoisated quickstarts.
+Find more information on how to use the Lynker Spatial gridded data packages at its [quickstart here](/data-service/gridded.md), or see how you can apply the [flowfabric-api](https://flowfabric-api.lynker-spatial.com/) to gain [Hydro-intelligence](/data-service/accessing-data.md) on their associated quickstarts.

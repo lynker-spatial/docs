@@ -23,8 +23,6 @@ import Card from "@/components/Card.vue";
   <img src="/assets/img/logo-dark.svg" class="logo-dark-mode" style="width: 100vw;" alt="Lynker Spatial Logo" />
 </a>
 
-> These docs covers the principal utilities and offerings of the [lynker spatial](https://lynker-spatial.com/#top).  These are all in very active development so check back often to see what's new!
-
 <style>
 /* Default to light mode: hide the logo meant for dark mode */
 html:not(.dark) .logo-dark-mode {
@@ -37,26 +35,28 @@ html.dark .logo-light-mode {
 }
 </style>
 
-> These docs covers the principal utilities and offerings of the [lynker spatial](https://lynker-spatial.com/#top).  These are all in very active development so check back often to see what's new!
+> This documentation covers the principal utilities and offerings of [Lynker Spatial](https://lynker-spatial.com/#top). These resources are under active development; please check back often to see what's new!
 
 ## For the Public
 
-The core objective of the Lynker Spatial team is to help you build a better decision.  Wheather it's for flood forecasting, water intelligence, or geospatial asset managment, if you need to make an informed decision built on real-time data, the Lynker spatial offerings are here to facilitate that.  If you are just exploring or need a quick helper to better anticipate the risks you face, there are several open and acessable landing pages built spesifically for your needs.  These include:
+The core mission of the Lynker Spatial team is to help you make better-informed decisions. Whether you are focused on flood forecasting, water intelligence, or geospatial asset management, our offerings provide the real-time data necessary to anticipate risk. 
 
-* The [Hydrofabric Viewer](https://hydrofabric.lynker-spatial.com/), which will help you better place your location in context with the National Water Forecasting enterprise
-* The [Hydro-Intelligence Scorecards](https://hydro-intel.lynker-spatial.com/), which helps you find the model and forecast that is right for you.
-* The [FloodFabric Dashboard](https://floodfabric.lynker-spatial.com/), which places the flood prediction front and center and helps remove the guesswork assosiated with determining wheater your building or roadway are in danger of inundationg.  
+If you are exploring our capabilities or need immediate insights, we provide several open-access landing pages tailored to specific needs:
 
-All of these tools are free, open, graphical, and interactive, allowing you to quickly build a more informed strategy specific to your level of risk tolerance.  If these applications spark inspiration or if you want a customized solution tailored specifically for your use cases, we are here to help.  Please, [reach out to the Lynker Spatial team](https://lynker-spatial.com/#contact) to see what we can build with you together!
+* **[Hydrofabric Viewer](https://hydrofabric.lynker-spatial.com/):** Contextualize your location within the broader National Water Forecasting enterprise.
+* **[Hydro-Intelligence Scorecards](https://hydro-intel.lynker-spatial.com/):** Evaluate and select the models and forecasts that best suit your requirements.
+* **[FloodFabric Dashboard](https://floodfabric.lynker-spatial.com/):** Access front-and-center flood predictions to remove the guesswork when determining if infrastructure, such as buildings or roadways, is at risk of inundation.
+
+These tools are free, open-source, and interactive, allowing you to build a strategy tailored to your specific risk tolerance. If these applications spark a new idea or if you require a custom solution, please [reach out to the Lynker Spatial team](https://lynker-spatial.com/#contact) to see what we can build together with you.
 
 ## For Power Users and Developers
 
-The Lynker spatial platform is built to enable a common starting point off which you can build your own applications and create your own applications, extending on our data and platforms.  The Data Platform provides authenticated access to the vast datastores that power the intellegence Lynker Spatial provides.  
+The Lynker Spatial platform provides a foundational ecosystem for building and extending your own applications. By leveraging our data and infrastructure, developers can integrate high-level intelligence into their own workflows.
 
-* Use the [FlowFabric API and Packages](https://flowfabric-api.lynker-spatial.com/), to faciltate seamless access to those data using programatic patterns.
-* Use the [geospatial tile marketplace](https://tiles.lynker-spatial.com/) for access to useful and usable geospataial datasets.  
+* **[FlowFabric API and Packages](https://flowfabric-api.lynker-spatial.com/):** Access our core data seamlessly using programmatic patterns and dedicated libraries.
+* **[Geospatial Tile Marketplace](https://tiles.lynker-spatial.com/):** Connect to high-performance, ready-to-use geospatial datasets.
 
-[Reach out to the team](https://lynker-spatial.com/#contact) if you have data, use cases, or applications you'd like to see implemented!
+If you have specific data needs, use cases, or applications you would like to see implemented, [reach out to the team](https://lynker-spatial.com/#contact) to discuss collaboration.
 
 <Home>
 

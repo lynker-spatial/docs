@@ -74,4 +74,8 @@ gdalinfo -ro -so "https://proxy.lynker-spatial.com/.../data.zarr"
 
 :::::
 
+## Usage limits
+
+We provide a generouse (5 gig) usage limit on these services that refreshes monthly.  To check how much you've used, navigate to [https://flowfabric-api.lynker-spatial.com/v1/me](https://flowfabric-api.lynker-spatial.com/v1/me).
+
 Now that you know how to get authenticated, [see how you access the data](/data-service/accessing-data.md).

@@ -10,7 +10,7 @@ Imagine you are managing water resources or monitoring flood risks in a specific
 
 ## Understanding Predictive Limits with the Model Skill Tab
 
-You can navigate to the Model Skill tab to evaluate a model’s overarching behavior during its most recent run. While the Score Card ranks localized, multi day performance, the Model Skill tab provides an immediate, CONUS wide snapshot of a single, freshly completed forecast. By checking the national Observation vs. Simulation scatter plot, you can instantly spot systematic biases such as a universal tendency to underpredict major flood events. Meanwhile, the Spatial Error (MAE) map highlights exactly where across the country the model struggled or succeeded, providing critical context on how the model reacts to the current day's specific weather patterns.
+You can navigate to the Model Skill tab to evaluate a model’s overarching behavior during its most recent run. While the Score Card ranks localized, multi-day performance, the Model Skill tab provides an immediate,  COntiguous United States (CONUS-wide) snapshot of a single, freshly completed forecast. By checking the national Observation vs. Simulation scatter plot, you can instantly spot systematic biases such as a universal tendency to underpredict major flood events. Meanwhile, the Spatial Error (MAE) map highlights exactly where across the country the model struggled or succeeded, providing critical context on how the model reacts to the current day's specific weather patterns.
 
 ![](/img/model_behavior.png)
 
@@ -22,7 +22,7 @@ Once you know which model to look at, the KGE Decomposition Radar Plots tell you
 
 # Accessing Hydro Forecast Data
 
-The Lynker Spatial data portal exposes key hydro-intellegence that is [accessable programatically](https://flowfabric-api.lynker-spatial.com/) using domain standard data standards such as zarr and parquet.  We also provide more user friendly aceess tools via the [flowfabric-r](https://lynker-spatial.github.io/flowfabric-r/) or [flowfabric-py](https://lynker-spatial.github.io/flowfabric-py/) packages, see the dedicated documenation pages within the individual package pages for more details.
+The Lynker Spatial data portal exposes key hydro-intelligence that is [acaccessible programmatically](https://flowfabric-api.lynker-spatial.com/) using domain standard data standards such as zarr and parquet.  We also provide more user-friendly access tools via the [flowfabric-r](https://lynker-spatial.github.io/flowfabric-r/) or [flowfabric-py](https://lynker-spatial.github.io/flowfabric-py/) packages, see the dedicated documentation pages within the individual package pages for more details.
 
 ![](/img/Flowfabric_packages.png)
 

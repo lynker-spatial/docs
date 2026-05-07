@@ -2,9 +2,9 @@
 
 [![](/img/hydrofabric_hero.png)](https://hydrofabric.lynker-spatial.com/)
 
-The [Lynker Spatial Hydrofabric](https://hydrofabric.lynker-spatial.com/) represents a modern, cloud-native approach to next-generation water resource modeling. Built in close collaboration between NOAA, the USGS, and Lynker, these modular artifacts provide a unified hydrologic framework. They are designed to be easily updated, manipulated, and quality-controlled to meet the needs of a wide range of modeling tasks while leveraging the best possible authoritative input data.
+The [Lynker Spatial Hydrofabric](https://hydrofabric.lynker-spatial.com/) is a modern, cloud-native framework for next-generation water resource modeling. Developed in close collaboration with NOAA and the USGS, these modular artifacts provide a unified hydrologic system designed for efficient updates, manipulation, and quality control. This framework enables a wide range of modeling tasks while leveraging authoritative input data.
 
-## Cloud Native Data Archives
+## Cloud-Native Data Archives
 NextGen hydrofabric artifacts are publicly available through the Lynker Spatial Data Service. By centralizing these datasets in cloud-native formats, users can interact with massive hydrologic networks without downloading the entire national database.
 
 ## Installation and Setup
@@ -18,7 +18,7 @@ remotes::install_github("NOAA-OWP/hydrofabric")
 library(hydrofabric)
 ```
 
-Loading library(hydrofabric) will attach core modular packages, including:
+Loading `library(hydrofabric)` will attach core modular packages, including:
 
 * **hfsubsetR**: For cloud-based hydrofabric subsetting.
 * **hydrofab**: A toolset for "fabricating" multiscale hydrofabrics.
