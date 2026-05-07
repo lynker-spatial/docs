@@ -18,7 +18,24 @@ import Home from "@/components/Home.vue";
 import Card from "@/components/Card.vue";
 </script>
 
-[<img src="/assets/img/logo-dark.svg" style="width: 100vw;" alt="Lynker Spatial Logo" />](https://lynker-spatial.com/#top)
+<a href="https://lynker-spatial.com/#top">
+  <img src="/assets/img/logo-light.svg" class="logo-light-mode" style="width: 100vw;" alt="Lynker Spatial Logo" />
+  <img src="/assets/img/logo-dark.svg" class="logo-dark-mode" style="width: 100vw;" alt="Lynker Spatial Logo" />
+</a>
+
+> These docs covers the principal utilities and offerings of the [lynker spatial](https://lynker-spatial.com/#top).  These are all in very active development so check back often to see what's new!
+
+<style>
+/* Default to light mode: hide the logo meant for dark mode */
+html:not(.dark) .logo-dark-mode {
+  display: none;
+}
+
+/* Dark mode: hide the logo meant for light mode */
+html.dark .logo-light-mode {
+  display: none;
+}
+</style>
 
 > These docs covers the principal utilities and offerings of the [lynker spatial](https://lynker-spatial.com/#top).  These are all in very active development so check back often to see what's new!
 

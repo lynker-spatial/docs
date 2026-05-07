@@ -2,7 +2,7 @@
 
 [![](/img/tiles_hero.png)](https://tiles.lynker-spatial.com/)
 
-The [Lynker Spatial Tile marketplace](https://tiles.lynker-spatial.com/) provides cloud-hosted vector and raster tile datasets (such as the Modeling Hydrofabric, Continental Rivers, and National Wetlands]) optimized for web and desktop applications. All data is served in Protocol Buffer (PBF) format and requires JWT Bearer token authentication.  This guide will help you quickly set up your account, authenticate, and pull your first tile from the Lynker Spatial Tile Service!  For more details see the [more extensive tiles documentation](index.html).
+The [Lynker Spatial Tile marketplace](https://tiles.lynker-spatial.com/) provides cloud-hosted vector and raster tile datasets (such as the Modeling Hydrofabric, Continental Rivers, and National Wetlands]) optimized for web and desktop applications. All data is served in Protocol Buffer (PBF) format and requires JWT Bearer token authentication.  This guide will help you quickly set up your account, authenticate, and pull your first tile from the Lynker Spatial Tile Service!  For more details see the [more extensive tiles documentation](https://tiles.lynker-spatial.com/docs/index.html#getting-started).
 
 ### Step 1: Log into your Lynker Spatial data proxy Account
 1. Visit the [Lynker Spatial Authentication Portal](https://proxy.lynker-spatial.com/) (see the [Authentication quickstart](https://docs.lynker-spatial.com/data-service/authentication) for more details) to sign in.
