@@ -1,4 +1,32 @@
+# About Hydro Forecasts
+
+[![](/img/Hydro_intel_hero.jpg)](https://hydro-intel.lynker-spatial.com/)
+
+## Finding the Best Forecast for Your Local Watershed
+
+Imagine you are managing water resources or monitoring flood risks in a specific basin, such as HUC8 10190004 (the South Platte River). With half a dozen national models generating forecasts every few hours, deciding which one to trust can be overwhelming. Hydro Intel solves this by tracking the continuous 7-day historical performance of every model at every stream gauge. By navigating to the Score Cards tab and zooming in on your HUC8 polygon, you can instantly see which model (e.g., NWM Short Range or NOAA FLASH) yielded the highest median predictive skill (KGE or NSE) over the past week for your specific neighborhood.
+
+![](/img/model_by_domain.png)
+
+## Understanding Predictive Limits with the Model Skill Tab
+
+You can navigate to the Model Skill tab to evaluate a model’s overarching behavior during its most recent run. While the Score Card ranks localized, multi day performance, the Model Skill tab provides an immediate, CONUS wide snapshot of a single, freshly completed forecast. By checking the national Observation vs. Simulation scatter plot, you can instantly spot systematic biases such as a universal tendency to underpredict major flood events. Meanwhile, the Spatial Error (MAE) map highlights exactly where across the country the model struggled or succeeded, providing critical context on how the model reacts to the current day's specific weather patterns.
+
+![](/img/model_behavior.png)
+
+## Understanding how the Models behave
+
+Once you know which model to look at, the KGE Decomposition Radar Plots tell you how to interpret its predictions. A high overall KGE score is great, but the radar charts break that score down into three critical behaviors: Correlation (r), Variability (α), and Volume Bias (β). If your region's winning model shows a perfect Correlation but a Volume Bias (β) of 1.2, it means the model is incredibly accurate at predicting exactly when the flood peak will arrive, but it tends to overpredict the total water volume by about 20%. This intelligence allows you to mentally adjust the forecast you are looking at.
+
+![](/img/model_radar.png)
+
 # Accessing Hydro Forecast Data
+
+The Lynker Spatial data portal exposes key hydro-intellegence that is [accessable programatically](https://flowfabric-api.lynker-spatial.com/) using domain standard data standards such as zarr and parquet.  We also provide more user friendly aceess tools via the [flowfabric-r](https://lynker-spatial.github.io/flowfabric-r/) or [flowfabric-py](https://lynker-spatial.github.io/flowfabric-py/) packages, see the dedicated documenation pages within the individual package pages for more details.
+
+![](/img/Flowfabric_packages.png)
+
+Below, we'll show you some of the most common access patterns exampling answers to common queries across the community.
 
 ## Short Range (All)
 
@@ -33,6 +61,7 @@ ds_mem
 ```
 
 ## Short Range (Subset)
+
 ```python
 import time
 import xarray as xr
@@ -79,6 +108,7 @@ end = time.time()
 ```
 
 ## Short Range (Query)
+
 ```python
 import xarray as xr
 import dask
@@ -128,6 +158,7 @@ end = time.time()
 ```
 
 ## NWIS Observations
+
 ```python
 uri = "https://data.lynker-spatial.com/nwis/2025090214_discharge.zarr"
 start = time.time()

@@ -10,9 +10,6 @@ const { theme } = useData();
 
 <template>
     <main>
-        <div class="HomeLogo">
-            <VPImage class="logo" :image="theme.logo" />
-        </div>
         <h1>Documentation</h1>
 
         <CardGrid>

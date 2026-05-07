@@ -6,7 +6,20 @@
 
 ## Development Setup
 
-We use [pnpm](https://pnpm.io/) as our package manager. To get running:
+Starting from 0 (note that you will need administrative privileges to correctly install these):
+
+0) We recommend [vscode](https://code.visualstudio.com/) to interact with this repository
+1) [Install node](https://nodejs.org/en/download/)
+
+* Check the box to automatically install the nessassary additional tools.
+* Follow the onscreen instructions
+
+2) Enable powershell: `Set-ExecutionPolicy RemoteSigned -Scope CurrentUser`
+3) Reboot to ensure installation took.
+4) Install pnpm with: `choco install pnpm`
+5) We also need git: `winget install --id Git.Git -e --source winget`
+6) Reboot to ensure installation took.
+7) We use [pnpm](https://pnpm.io/) as our package manager. To get running:
 
 ```sh
 # Clone into ./lynker-spatial-docs

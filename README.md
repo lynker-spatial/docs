@@ -1,6 +1,6 @@
 # Lynker Spatial Docs
 
-This repository deploys Lynker Spatial's [documentation website](https://docs.lynker-spatial.com), built with [VitePress](https://vitepress.dev/).
+This repository deploys Lynker Spatial's landing page [documentation website](https://docs.lynker-spatial.com), built with [VitePress](https://vitepress.dev/).
 
 ## Contributing
 
